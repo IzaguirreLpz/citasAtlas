@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Raleway"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+  />
+  <link rel="stylesheet" href="step.css" />
+  <body>
+    <form id="regForm"  action="localhost:3000">
+      <!-- One "tab" for each step in the form: -->
+      <div class="tab">
+        <h1 style="color:#2680EB; font-size:24px;font-weight:ligth">Agenda tu visita con el vendedor:</h1>
+      <hr style="border: 2px solid #bfbfbf4d;" />
+      <p>
+        Te conectamos directamente con el vendedor de la propiedad. Te puede
+        atender de forma fisica o virtual mediante una video llamada.
+      </p>
+        <h5>Selecciona el tipo de cita:</h5>
+        <div class="row center" style="margin-top: 20px;">
+          <div class="divButton divButton_selected" >
+            Presencial
+            <label class="radio_style validate ">
+              <input id="btn_presencial" name="hora_visita" onclick="radioValue(this)" value="Presencial" type="radio" checked/>
+              <span class="radioSpan">Presencial</span>
+            </label>
+            <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
+          </div>
+          <div class="divButton" >
+            Video Llamada
+            <label class="radio_style validate">
+              <input id="btn_virtual" name="hora_visita" onclick="radioValue(this)" value="Video Llamada" type="radio"/>
+              <span class="radioSpan">Video Llamada</span>
+            </label>
+            <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
+    
+          </div>
+          <!-- <input type="button" id="btn_presencial" class="button_selected" value="Presencial"></input>
+          <input type="button" id="btn_virtual" class="button_unSelected" value="Video Llamada"></input> -->
+        </div>
+        <div id="section_presencial" class="center">
+          <img src="img\tapabocas.svg" height="205" alt="Imagen de personas con tapabocas" />
+          <p>
+            Atlas Home se preocupa por tí. Si tienes que salir de tu hogar
+            procura utilizar todas las medidas de seguridad para ti y tus seres
+            queridos.
+          </p>
+        </div>
+        <div id="section_videollamada" class="center" style="display: none;">
+          <img src="img\videollamada.svg" height="205" alt="Imagen de video llamada" />
+          <p>
+            Atlas Home se preocupa por tí. Por eso te sugerimos usar medidas de
+            bioseguridad recomendadas y el uso de citas virtuales. ¡La
+            tecnologia esta para ayudarnos a todos!
+          </p>
+        </div>
+      </div>
+      <div class="tab">
+        <h5>Selecciona la Fecha:</h5>
+        <p>
+          <!-- prueba -->
+        <!--   <div class="input-field inline"> -->
+            <input type="text" class="datepicker">
+            <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
+       <!--    </div> -->
+          <!-- prueba -->
+          <!-- <input type="text" class="datepicker" /> -->
+        </p>
+        <h5>Selecciona la Hora:</h5>
+        <div class="slideshow-container">
+          <div class="mySlides">
+           <!--  <input class="button_unSelected" type="button" value="9:30 am"></input>
+            <input class="button_unSelected" type="button" value="10:00 am"></input>
+            <input class="button_unSelected" type="button" value="10:30 am"></input> -->
+          <!-- Botones para hora -->
+      <div class="divButton divButton_selected" >
+        9:30 am
+        <label class="radio_style validate">
+          <input name="hora_visita" onclick="radioValue(this)" value="9:30 am" type="radio" checked/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+        <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
+
+      </div>
+      <div class="divButton" >
+        10:00 am
+        <label class="radio_style">
+          <input name="hora_visita" onclick="radioValue(this)" value="9:30 am" type="radio"/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+      </div>
+      <div class="divButton" >
+        10:30 am
+        <label class="radio_style">
+          <input name="hora_visita" onclick="radioValue(this)" value="9:30 am" type="radio"/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+      </div>
+      
+      <!-- Botones para hora -->
+          
+          </div>
+
+          <div class="mySlides">
+         
+         <!--    <input class="button_unSelected" type="button" value="11:00 am"></input>
+            <input class="button_unSelected" type="button" value="11:30 am"></input>
+            <input class="button_unSelected" type="button" value="12:00 m"></input>
+          -->
+
+           <!-- Botones para hora -->
+      <div class="divButton" >
+        11:00 am
+        <label class="radio_style validate">
+          <input name="hora_visita" onclick="radioValue(this)" value="11:00 am" type="radio"/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+        <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
+
+      </div>
+      <div class="divButton" >
+        11:30 am
+        <label class="radio_style">
+          <input name="hora_visita" onclick="radioValue(this)" value="11:30 am" type="radio"/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+      </div>
+      <div class="divButton" >
+        12:00 pm
+        <label class="radio_style">
+          <input name="hora_visita" onclick="radioValue(this)" value="12:00 am" type="radio"/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+      </div>
+      
+      <!-- Botones para hora -->
+
+          </div>
+
+          <div class="mySlides">
+            <!-- <input class="button_unSelected" type="button" value="12:30 pm"></input>
+            <input class="button_unSelected" type="button" value="1:00 pm"></input>
+            <input class="button_unSelected" type="button" value="1:30 pm"></input> -->
+             <!-- Botones para hora -->
+      <div class="divButton" >
+        12:30 pm
+        <label class="radio_style validate">
+          <input name="hora_visita" onclick="radioValue(this)" value="12:30 pm" type="radio"/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+        <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
+
+      </div>
+      <div class="divButton" >
+        1:00 pm
+        <label class="radio_style">
+          <input name="hora_visita" onclick="radioValue(this)" value="1:00 pm" type="radio"/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+      </div>
+      <div class="divButton" >
+        1:30 pm
+        <label class="radio_style">
+          <input name="hora_visita" onclick="radioValue(this)" value="1:30 pm" type="radio"/>
+          <span class="radioSpan"> 9:30 am</span>
+        </label>
+      </div>
+      
+      <!-- Botones para hora -->
+          </div>
+
+          <div class="mySlides">
+            <!-- <button class="" type="button" value="2:00 pm"></button>
+            <button class="" type="button" value="2:30 pm"></button>
+            <button class="" type="button" value="3:00 pm"></button>
+             -->
+             <div class="divButton" >
+              2:00 pm
+              <label class="radio_style validate">
+                <input name="hora_visita" onclick="radioValue(this)" value="2:00 pm" type="radio"/>
+                <span class="radioSpan"> 9:30 am</span>
+              </label>
+              <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
+      
+            </div>
+            <div class="divButton" >
+              2:30 pm
+              <label class="radio_style">
+                <input name="hora_visita" onclick="radioValue(this)" value="2:30 pm" type="radio"/>
+                <span class="radioSpan"> 9:30 am</span>
+              </label>
+            </div>
+            <div class="divButton" >
+              3:00 pm
+              <label class="radio_style">
+                <input name="hora_visita" onclick="radioValue(this)" value="3:00 pm" type="radio"/>
+                <span class="radioSpan"> 9:30 am</span>
+              </label>
+            </div>
+            </div>
+
+          <div class="mySlides">
+            <!-- <input class="" type="button" value="3:30 pm"></input>
+            <input class="" type="button" value="4:00 pm"></input>
+            <input class="" type="button" value="4:30 pm"></input> -->
+            <div class="divButton" >
+              3:30 pm
+              <label class="radio_style validate">
+                <input name="hora_visita" onclick="radioValue(this)" value="3:30 pm" type="radio"/>
+                <span class="radioSpan"> 9:30 am</span>
+              </label>
+              <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
+            </div>
+            <div class="divButton" >
+              4:00 pm
+              <label class="radio_style">
+                <input name="hora_visita" onclick="radioValue(this)" value="4:00 pm" type="radio"/>
+                <span class="radioSpan"> 9:30 am</span>
+              </label>
+            </div>
+            <div class="divButton" >
+              4:30 pm
+              <label class="radio_style">
+                <input name="hora_visita" onclick="radioValue(this)" value="4:30 pm" type="radio"/>
+                <span class="radioSpan"> 9:30 am</span>
+              </label>
+            </div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+      </div>
+      <div class="tab">
+        <h5>Informacion De Contacto:</h5>
+        <div class="row">
+          <div class="input-field col s6">
+            <input
+              placeholder="Nombres"
+              id="first_name"
+              type="text"
+              class="validate"
+            />
+            <label for="first_name">Nombres</label>
+            <span
+              class="helper-text"
+              data-error="No olvides llenar todos los campos"
+              data-success="Excelente!"
+              >Ej: Juan Pablo</span
+            >
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate" />
+            <label for="last_name">Apellidos</label>
+            <span
+              class="helper-text"
+              data-error="No olvides llenar todos los campos"
+              data-success="Excelente!"
+              >Ej: Lopez Perez</span
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate" />
+            <label for="email">Correo Electrónico</label>
+            <span
+              class="helper-text"
+              data-error="Revisa que tu correo este bien escrito"
+              data-success="Excelente!"
+              >Ej: juanlopez@gmail.com</span
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              placeholder="Placeholder"
+              id="first_name"
+              type="number"
+              class="validate"
+            />
+            <label for="first_name">Identidad / Cédula</label
+            ><span
+              class="helper-text"
+              data-error="No olvides llenar todos los campos"
+              data-success="Excelente!"
+              >Ej: 0801181000000</span
+            >
+          </div>
+          <div class="input-field col s12">
+            <input id="cellphone" type="number" class="validate" />
+            <label for="cellphone">Celular</label>
+            <span
+              class="helper-text"
+              data-error="No olvides llenar todos los campos"
+              data-success="Excelente!"
+              >Ej: 99999999</span
+            >
+          </div>
+        </div>
+          <p>
+            <label>
+              <input type="checkbox" id="terminosCondiciones" class="validate" validate="true" required="true"/>
+              <span>Acepto Condiciones</span>
+            </label>
+            <span
+              class="helper-text"
+              data-error="Antes de poder continuar necesitamos que aceptes nuestros terminos y condiciones para poder brindarte un mejor servicio"
+              data-success="Excelente!"
+              ></span
+            >
+          </p>
+          <p>
+            Al agendar visita acepto crear mi cuenta en Atlas Home. Caso
+            contrario almacenar tu cita en tu historial. Autorizo a Atlas Home a
+            revisar mi buró financiero para proveer un mejor servicio financiero
+            y conectarte con la entidad bancaria que mas se adapte a tí. Atlas
+            Home y sus afiliados pueden contactarte por los medios antes
+            descritos para darle seguimiento a tu solicitud.
+          </p>
+          <p>
+            Acepto los <a href="#">Términos</a> y <a href="#">Condiciones</a> de
+            Atlas Home
+          </p>
+        
+      </div>
+
+      <div style="overflow: auto">
+        <div style="float: right">
+          <input type="button" class="button_unSelected" id="prevBtn" onclick="nextPrev(-1)" value="Regresar">
+          </input>
+          <input type="button" class="button_selected" id="nextBtn" onclick="nextPrev(1)" value="Elegir Fecha y Hora"></input>
+        </div>
+      </div>
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align: center; margin-top: 40px">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="step.js"></script>
+  </body>
+</html>
