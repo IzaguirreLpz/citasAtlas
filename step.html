@@ -66,7 +66,8 @@
         <!--   <div class="input-field inline"> -->
             <input type="text" class="datepicker">
             <span class="helper-text" data-error="Asegurate de elegir tu fecha para la cita" data-success="right"></span>
-       <!--    </div> -->
+          
+            <!--    </div> -->
           <!-- prueba -->
           <!-- <input type="text" class="datepicker" /> -->
         </p>
@@ -326,16 +327,18 @@
             Acepto los <a href="#">Términos</a> y <a href="#">Condiciones</a> de
             Atlas Home
           </p>
-        
       </div>
 
-      <div style="overflow: auto">
+      <!-- <div style="overflow: auto">
         <div style="float: right">
-          <input type="button" class="button_unSelected" id="prevBtn" onclick="nextPrev(-1)" value="Regresar">
-          </input>
-          <input type="button" class="button_selected" id="nextBtn" onclick="nextPrev(1)" value="Elegir Fecha y Hora"></input>
         </div>
+      </div> -->
+      <div class="center">
+        <a type="button" class="button_regresar" id="prevBtn" onclick="nextPrev(-1)"><img src="img\ic_left_arrow.svg" alt="flecha de regresar"> Regresar</a>
       </div>
+          <!-- <input type="button" class="button_regresar" id="prevBtn" onclick="nextPrev(-1)" value="Regresar">  
+        </input> -->
+          <input type="button" class="button_continue" id="nextBtn" onclick="nextPrev(1)" value="Elegir Fecha y Hora"></input>
       <!-- Circles which indicates the steps of the form: -->
       <div style="text-align: center; margin-top: 40px">
         <span class="step"></span>
@@ -344,7 +347,6 @@
         <span class="step"></span>
       </div>
     </form>
-    
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="step.js"></script>

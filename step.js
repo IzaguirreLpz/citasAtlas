@@ -125,7 +125,7 @@ tomorrow.setDate(tomorrow.getDate() + 1);
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".datepicker");
   var instances = M.Datepicker.init(elems, {
-    format: "dd/mm/yyyy",
+    format: "ddd, dd mmmm yyyy",
     setDefaultDate: true,
     defaultDate: new Date(tomorrow),
     disableWeekends: false,
@@ -160,16 +160,16 @@ document.addEventListener("DOMContentLoaded", function () {
         "Nov",
         "Dic",
       ],
+      weekdaysShort: ["Dom", "Lun", "Mar", "Mier", "Juev", "Vier", "Sab"],
       weekDays: [
+        "Domingo",
         "Lunes",
         "Martes",
         "Miercoles",
         "Jueves",
         "Viernes",
         "Sabado",
-        "Domingo",
       ],
-      weekdaysShort: ["Dom", "Lun", "Mar", "Mier", "Juev", "Vier", "Sab"],
       weekdaysAbbrev: ["D", "L", "M", "M", "J", "V", "S"],
     },
   });
